@@ -27,10 +27,10 @@ angular.module('myApp.controllers', []).
       socket.emit('d', {'value' : '10px;'});
     };
 
-    $scope.d();
-    $scope.d();
-    $scope.d();
-    $scope.d();
+    // $scope.d();
+    // $scope.d();
+    // $scope.d();
+    // $scope.d();
   	
     socket.on('r', function(data) {
       console.log('r');
