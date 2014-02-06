@@ -19,14 +19,17 @@
     <li><a href="#/view1">view1</a></li>
     <li><a href="#/view2">view2</a></li>
   </ul> -->
-<div class='btn btn-primary'>left</div>
-<div class='btn btn-primary'>right</div>
-<div class='btn btn-primary'>up</div>
-<div class='btn btn-primary'>down</div>
-
 
   <div class="container" ng-controller="SearchTwitterCtrl"
     style="margin-top: 1em;">
+
+<div class='btn btn-primary' ng-click='l()'>left</div>
+<div class='btn btn-primary' ng-click='r()'>right</div>
+<div class='btn btn-primary' ng-click='u()'>up</div>
+<div class='btn btn-primary' ng-click='d()'>down</div>
+
+
+
       <div id='pointer' chicken>
         <img src="http://commons.wikivet.net/images/e/e5/Chicken-logo.png">
       </div>
