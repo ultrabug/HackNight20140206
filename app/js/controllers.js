@@ -12,19 +12,19 @@ angular.module('myApp.controllers', []).
   	  // $interval(function(){socket.emit('hashtag', {'value' : 'chicken'});},5000)
   	$scope.tweets = [];
   	$scope.l = function() {
-  		socket.emit('l', {'l' : '10px;'});
+  		socket.emit('l', {'l' : '10'});
   	};
 
     $scope.r = function() {
-      socket.emit('r', {'r' : '10px;'});
+      socket.emit('r', {'r' : '10'});
     };
 
     $scope.u = function() {
-      socket.emit('u', {'u' : '10px;'});
+      socket.emit('u', {'u' : '10'});
     };
 
     $scope.d = function() {
-      socket.emit('d', {'d' : '10px;'});
+      socket.emit('d', {'d' : '10'});
     };
 
     // $scope.d();
@@ -39,22 +39,25 @@ angular.module('myApp.controllers', []).
     socket.on('r', function(data) {
       console.log('r');
       console.log(data);
-
+      data["left"] += parseInt(data, 10);
   		$scope.$apply();
   	});
       socket.on('l', function(data) {
       console.log('l');
       console.log(data);
+      data["left"] -= parseInt(data, 10);
       $scope.$apply();
     });
     socket.on('d', function(data) {
       console.log('d');
       console.log(data);
+      data["top"] += parseInt(data, 10);
       $scope.$apply();
     });
     socket.on('u', function(data) {
       console.log('u');
       console.log(data);
+      data["top"] -= parseInt(data, 10);
       $scope.$apply();
     });
   }])
