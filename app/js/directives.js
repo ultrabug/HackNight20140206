@@ -25,8 +25,8 @@ angular.module('myApp.directives', [])
         scope.$watch("chicken", function(newv) {
           console.log(newv);
         });
-        elm.css('top', '100px');
-        elm.css('left', '100px');
+        elm.css('top', newv["top"] +'px');
+        elm.css('left', newv["left"]+'px');
   			// elm.text('kikoooooooochicken');
   		        elm.css('position', 'absolute');
       }
