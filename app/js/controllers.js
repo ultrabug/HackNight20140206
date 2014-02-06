@@ -12,19 +12,19 @@ angular.module('myApp.controllers', []).
   	  // $interval(function(){socket.emit('hashtag', {'value' : 'chicken'});},5000)
   	$scope.tweets = [];
   	$scope.l = function() {
-  		socket.emit('l', {'value' : '10px;'});
+  		socket.emit('l', {'l' : '10px;'});
   	};
 
     $scope.r = function() {
-      socket.emit('r', {'value' : '10px;'});
+      socket.emit('r', {'r' : '10px;'});
     };
 
     $scope.u = function() {
-      socket.emit('u', {'value' : '10px;'});
+      socket.emit('u', {'u' : '10px;'});
     };
 
     $scope.d = function() {
-      socket.emit('d', {'value' : '10px;'});
+      socket.emit('d', {'d' : '10px;'});
     };
 
     // $scope.d();
@@ -35,7 +35,7 @@ angular.module('myApp.controllers', []).
       'top' : 0,
       'left' : 0
     };
-  
+
     socket.on('r', function(data) {
       console.log('r');
       console.log(data);
