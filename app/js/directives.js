@@ -13,7 +13,7 @@ angular.module('myApp.directives', [])
   			};
   		},
       scope : {
-        'chicken' : '='
+        'chicken' : '=chicken'
       },
   		link : function(scope, elm, attrs, ctrl){
   			elm.text(scope.getText())
@@ -23,6 +23,7 @@ angular.module('myApp.directives', [])
         console.log(scope.chicken);
         
         scope.$watch("chicken", function(newv) {
+          console.log('NEW CHICKEN');
           console.log(newv);
           elm.css('top', newv["top"] +'px');
           elm.css('left', newv["left"]+'px');
