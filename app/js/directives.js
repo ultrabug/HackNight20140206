@@ -22,13 +22,16 @@ angular.module('myApp.directives', [])
         console.log('kikooo');
         console.log(scope.chicken);
         
-      $swipe.bind(elm, function(start, move, end, cancel){
-          console.log("swipe");
-          console.log(arguments);
+      $swipe.bind(elm, {
+
+        start: function(data){
+
+        },
+        end : function(end){
           elm.css('top', end.y +'px');
           elm.css('left', end.x+'px');
 
-      });
+        });
         scope.$watch("chicken", function(newv) {
           console.log('NEW CHICKEN');
           console.log(newv);
