@@ -39,6 +39,7 @@ angular.module('myApp.controllers', []).
     socket.on('r', function(data) {
       console.log('r');
       console.log(data);
+      
   		$scope.$apply();
   	});
       socket.on('l', function(data) {
