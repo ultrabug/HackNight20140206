@@ -28,6 +28,7 @@ angular.module('myApp.directives', [])
 
         },
         end : function(end){
+          console.log(end);
           elm.css('top', end.y +'px');
           elm.css('left', end.x+'px');
 
