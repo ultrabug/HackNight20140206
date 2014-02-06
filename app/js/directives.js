@@ -4,7 +4,7 @@
 
 
 angular.module('myApp.directives', [])
-  .directive('chicken', function($parse){
+  .directive('chicken', function($parse, $swipe){
   	return {
   		controller: function($scope, $element, $attrs){
   			$scope.getText = function()
@@ -22,6 +22,9 @@ angular.module('myApp.directives', [])
         console.log('kikooo');
         console.log(scope.chicken);
         
+      $swipe.bind(elm, function(start, move, end, cancel){
+        console.log(arguments);
+      });
         scope.$watch("chicken", function(newv) {
           console.log('NEW CHICKEN');
           console.log(newv);
