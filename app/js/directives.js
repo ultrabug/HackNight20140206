@@ -6,8 +6,8 @@
 angular.module('myApp.directives', [])
   .directive('chicken', function(){
   	return {
-  		controller: function(scope){
-  			scope.getText = function()
+  		controller: function($scope, $element, $attrs){
+  			$scope.getText = function()
   			{
   				return 'test';
   			};
