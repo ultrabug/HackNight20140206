@@ -23,7 +23,10 @@ angular.module('myApp.directives', [])
         console.log(scope.chicken);
         
       $swipe.bind(elm, function(start, move, end, cancel){
-        console.log(arguments);
+        
+          elm.css('top', end.y +'px');
+          elm.css('left', end.x+'px');
+
       });
         scope.$watch("chicken", function(newv) {
           console.log('NEW CHICKEN');
