@@ -32,14 +32,26 @@ angular.module('myApp.controllers', []).
     $scope.d();
     $scope.d();
   	
-    socket.on('d', function(data) {
+    socket.on('r', function(data) {
+      console.log('r');
       console.log(data);
-  		// if ($scope.tweets.length > 1000) {
-  		// 	$scope.tweets = $scope.tweets.slice(0,20);
-  		// }
-  		// $scope.tweets.unshift(data);
   		$scope.$apply();
   	});
+      socket.on('l', function(data) {
+      console.log('l');
+      console.log(data);
+      $scope.$apply();
+    });
+    socket.on('d', function(data) {
+      console.log('d');
+      console.log(data);
+      $scope.$apply();
+    });
+    socket.on('u', function(data) {
+      console.log('u');
+      console.log(data);
+      $scope.$apply();
+    });
   }])
   .controller("MasterCtrl", function($scope) {
   	//   var socket = io.connect('/main');
