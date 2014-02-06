@@ -31,7 +31,11 @@ angular.module('myApp.controllers', []).
     // $scope.d();
     // $scope.d();
     // $scope.d();
-  	
+  	$scope.data = {
+      'top' : 0,
+      'left' : 0
+    };
+  
     socket.on('r', function(data) {
       console.log('r');
       console.log(data);
