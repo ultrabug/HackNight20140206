@@ -37,22 +37,29 @@ angular.module('myApp.controllers', []).
     };
 
     socket.on('r', function(data) {
-
+    console.log(data);
+     console.log('r');
+ 
       $scope.data["left"] += parseInt(data, 10);
   		$scope.$apply();
   	});
       socket.on('l', function(data) {
-
+     console.log(data);
+     console.log('l');
+ 
       $scope.data["left"] -= parseInt(data, 10);
       $scope.$apply();
     });
     socket.on('d', function(data) {
-
+     console.log(data);
+     console.log('d');
+ 
       $scope.data["top"] += parseInt(data, 10);
       $scope.$apply();
     });
     socket.on('u', function(data) {
-      console.log(data)
+      console.log(data);
+      console.log('u');
       $scope.data["top"] -= parseInt(data, 10);
       $scope.$apply();
     });
