@@ -17,12 +17,11 @@ angular.module('myApp.controllers', []).
   		socket.emit('hashtag', {'value' : $scope.hashtag});
   	};
 
-  	socket.on('tweet', function(data) {
-  		if ($scope.tweets.length > 1000) {
-  			$scope.tweets = $scope.tweets.slice(0,20);
-  		}
-  		$scope.tweets.unshift(data);
-  		console.log(data);
+  	socket.on('pointer', function(data) {
+  		// if ($scope.tweets.length > 1000) {
+  		// 	$scope.tweets = $scope.tweets.slice(0,20);
+  		// }
+  		// $scope.tweets.unshift(data);
   		$scope.$apply();
   	});
   }])
