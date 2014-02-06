@@ -12,11 +12,20 @@ angular.module('myApp.directives', [])
   				return 'test';
   			};
   		},
+      scope : {
+        'data' : '='
+      },
   		link : function(scope, elm, attrs, ctrl){
   			elm.text(scope.getText())
   			elm.css('background-color', 'red');
+        console.log('kikooo');
+        console.log(scope);
+
+        elm.css('top', '100px');
+        elm.css('left', '100px');
   			// elm.text('kikoooooooochicken');
-  		}
+  		        elm.css('position', 'absolute');
+      }
   }
   })
   .directive('appVersion', ['version', function(version) {
