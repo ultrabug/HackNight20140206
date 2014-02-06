@@ -31,7 +31,8 @@ angular.module('myApp.directives', [])
           elm.css('top', end.y +'px');
           elm.css('left', end.x+'px');
 
-        });
+        }
+      });
         scope.$watch("chicken", function(newv) {
           console.log('NEW CHICKEN');
           console.log(newv);
