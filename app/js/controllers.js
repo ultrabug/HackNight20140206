@@ -52,6 +52,7 @@ angular.module('myApp.controllers', []).
       $scope.$apply();
     });
     socket.on('u', function(data) {
+      console.log(data)
       $scope.data["top"] -= parseInt(data, 10);
       $scope.$apply();
     });
