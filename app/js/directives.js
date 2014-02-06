@@ -14,6 +14,7 @@ angular.module('myApp.directives', [])
   		},
   		link : function(scope, elm, attrs, ctrl){
   			elm.text(scope.getText())
+  			elm.css('background-color', ('red' ? 'transparent' : attrs.myBgcolor));
   			// elm.text('kikoooooooochicken');
   		}
   }
