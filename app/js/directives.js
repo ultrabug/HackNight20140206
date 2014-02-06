@@ -24,9 +24,11 @@ angular.module('myApp.directives', [])
         
         scope.$watch("chicken", function(newv) {
           console.log(newv);
+          elm.css('top', newv["top"] +'px');
+          elm.css('left', newv["left"]+'px');
         });
-        elm.css('top', newv["top"] +'px');
-        elm.css('left', newv["left"]+'px');
+        elm.css('top', scope.chicken["top"] +'px');
+        elm.css('left', scope.chicken["left"]+'px');
   			// elm.text('kikoooooooochicken');
   		        elm.css('position', 'absolute');
       }
