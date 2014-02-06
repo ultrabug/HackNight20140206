@@ -29,9 +29,10 @@ angular.module('myApp.controllers', []).
 
     $scope.d();
     $scope.d();
-      $scope.d();
-          $scope.d();
-  	socket.on('l', function(data) {
+    $scope.d();
+    $scope.d();
+  	
+    socket.on('d', function(data) {
       console.log(data);
   		// if ($scope.tweets.length > 1000) {
   		// 	$scope.tweets = $scope.tweets.slice(0,20);
