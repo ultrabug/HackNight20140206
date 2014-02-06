@@ -1,3 +1,4 @@
+
 'use strict';
 
 /* Controllers */
@@ -7,17 +8,31 @@ angular.module('myApp.controllers', []).
 
   }])
   .controller('SearchTwitterCtrl', ['$scope', '$interval', function($scope, $interval) {
-  	  var socket = io.connect('/main');
+  	  var socket = io.connect('/pointer');
   	  // $interval(function(){socket.emit('hashtag', {'value' : 'chicken'});},5000)
   	$scope.tweets = [];
-  	$scope.sendSearchToHieu = function() {
-	  	$scope.tweets = [];
-  		console.log($scope.hashtag);
-
-  		socket.emit('hashtag', {'value' : $scope.hashtag});
+  	$scope.l = function() {
+  		socket.emit('l', {'value' : '10px;'});
   	};
 
-  	socket.on('pointer', function(data) {
+    $scope.r = function() {
+      socket.emit('r', {'value' : '10px;'});
+    };
+
+    $scope.u = function() {
+      socket.emit('u', {'value' : '10px;'});
+    };
+
+    $scope.d = function() {
+      socket.emit('d', {'value' : '10px;'});
+    };
+
+    $scope.d();
+    $scope.d();
+      $scope.d();
+          $scope.d();
+  	socket.on('l', function(data) {
+      console.log(data);
   		// if ($scope.tweets.length > 1000) {
   		// 	$scope.tweets = $scope.tweets.slice(0,20);
   		// }
