@@ -32,8 +32,8 @@ angular.module('myApp.controllers', []).
     // $scope.d();
     // $scope.d();
   	$scope.data = {
-      'top' : 200,
-      'left' : 200
+      'top' : 70,
+      'left' : 600
     };
 
     socket.on('r', function(data) {

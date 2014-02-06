@@ -17,7 +17,7 @@ angular.module('myApp.directives', [])
       },
   		link : function(scope, elm, attrs, ctrl){
   			// elm.text(scope.getText())
-  			elm.css('background-color', 'red');
+  			// elm.css('background-color', 'red');
 
         console.log('kikooo');
         console.log('kikooo');
